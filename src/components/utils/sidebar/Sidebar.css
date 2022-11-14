@@ -1,0 +1,48 @@
+
+.theme-icon {
+  @apply transition duration-1000 scale-75
+  text-sky-600 hover:text-sky-800
+  dark:text-sky-500 dark:hover:text-sky-300;
+}
+
+.theme-icon-box {
+  @apply flex flex-row justify-evenly
+  bg-slate-300 dark:bg-slate-900 
+  bg-opacity-90
+  w-full h-16 items-center
+  m-0 shadow-lg;
+}
+
+.sidebar {
+  @apply fixed top-0 left-0 h-screen w-16 m-0 flex flex-col
+bg-slate-300 dark:bg-slate-800 text-white shadow-lg;
+}
+
+.sidebar-aws-icon-div {
+  @apply relative flex items-center justify-center
+  h-12 w-12 mt-2 mb-2 mx-auto;
+}
+
+.sidebar-hr {
+  @apply bg-slate-400 dark:bg-slate-500 
+  border border-slate-300 dark:border-slate-600 rounded-full
+  mx-1;
+}
+
+.sidebar-theme-hr {
+  @apply border rounded-full mx-0
+  bg-slate-400 dark:bg-slate-600 
+  border-slate-300 dark:border-slate-700;
+}
+
+.sidebar-aws-icon-img {
+  @apply rounded-3xl hover:rounded-xl
+  transition-all duration-300 ease-linear
+  cursor-pointer;
+}
+
+.sidebar-tooltip {
+  @apply hidden absolute w-auto p-2 m-2 min-w-max left-14
+  rounded-md shadow-md text-white bg-gray-900
+  text-xs font-bold transition-all duration-100 scale-0 origin-left;
+}

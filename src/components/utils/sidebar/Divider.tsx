@@ -1,0 +1,1 @@
+export const Divider = () => <hr className="sidebar-hr" />

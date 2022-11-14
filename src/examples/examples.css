@@ -1,0 +1,5 @@
+@import '../components/utils/sidebar/Sidebar.css';
+
+.codesyntax {
+  @apply bg-slate-500;
+}
