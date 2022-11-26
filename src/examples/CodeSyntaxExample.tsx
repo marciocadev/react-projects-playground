@@ -2,14 +2,18 @@ import { CodeSyntaxTS } from "../components/utils/code-syntax/CodeSyntaxTS";
 
 export const CodeSyntaxExample = () => {
   const code = `import 'source-map-support/register';
-import { RDSDataClient, ExecuteStatementCommand, ExecuteStatementCommandInput } from '@aws-sdk/client-rds-data';
+import { 
+  RDSDataClient,
+  ExecuteStatementCommand,
+  ExecuteStatementCommandInput } from '@aws-sdk/client-rds-data';
 // eslint-disable-next-line import/no-extraneous-dependencies
 import { APIGatewayEvent, APIGatewayProxyResult } from 'aws-lambda';
 import { v4 as uuidv4 } from 'uuid';
 
 const rdsClient = new RDSDataClient({ region: process.env.AWS_REGION });
 
-export const handler = async(event: APIGatewayEvent): Promise<APIGatewayProxyResult> => {
+export const handler = async(event: APIGatewayEvent)
+  :Promise<APIGatewayProxyResult> => {
   console.log(JSON.stringify(event, undefined, 2));
 
   const { username, password, email } = JSON.parse(event.body!);
@@ -58,12 +62,13 @@ export const handler = async(event: APIGatewayEvent): Promise<APIGatewayProxyRes
               highlightLines={[2, 14, 15, 18, 22]}
               style={{
                 paddingBottom: '1.25rem',
-                paddingTop: '1.25rem', overflowX: 'auto', }}
-                />
+                paddingTop: '1.25rem', overflowX: 'auto',
+              }}
+            />
           </div>
         </div>
       </div>
-            
+
     </div>
   );
 }
